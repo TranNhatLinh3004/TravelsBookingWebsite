@@ -1,0 +1,84 @@
+.search__bar {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  width: max-content;
+  box-shadow: rgba(17, 12, 46, 0.45) 0px 30px 90px 0px;
+  width: 810px;
+  height: 80px;
+}
+
+.forms {
+  display: flex;
+  overflow: hidden;
+  padding: 10px 15px;
+}
+
+.form__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  padding: 0 10px 0 0;
+}
+
+.form__group h6 {
+  font-size: 14px;
+  position: relative;
+  left: 10px;
+}
+
+.form__group-fast:last-child {
+  border-right: none;
+}
+
+.form__group-fast:last-child input {
+  width: 90px;
+}
+
+.form__group span {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.form__group input {
+  font-size: 0.8rem;
+  border: none;
+  color: var(--heading-color);
+  font-weight: 500;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.form__group input:focus {
+  margin-bottom: 0;
+}
+
+.form__group-fast {
+  border-right: 2px solid #ddd;
+}
+
+/* .col__cr {
+  display: flex;
+  background-color: aqua;
+} */
+
+.search__icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px 5px 10px 5px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.search__icon i {
+  color: #fff;
+}
+
+.search__icon i:hover {
+  font-weight: bold;
+  font-size: 18px;
+}

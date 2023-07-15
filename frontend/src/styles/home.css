@@ -1,0 +1,167 @@
+.section__home {
+  /* background-color: aquamarine; */
+  position: relative;
+  top: 100px;
+  /* margin: 0 110px; */
+}
+
+.row__cr {
+  justify-content: space-between;
+}
+
+.col__cr {
+  justify-content: space-between;
+  width: 550px;
+  height: 410px;
+}
+
+.row__cr,
+.col__cr {
+  display: flex;
+}
+
+.hero__content {
+  width: 550px;
+}
+
+.hero__subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.hero__subtitle img {
+  position: relative;
+  width: 2.3rem;
+  height: 2.3rem;
+  animation: rotate 5s linear infinite;
+  /* transform-origin: 1px 0px 0px; */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hero__content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: var(--heading-color);
+}
+
+.hero__content h1 .highlight {
+  color: var(--primary-color);
+}
+
+.hero__content p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 2rem;
+}
+
+.hero__img-box img,
+.hero__img-box video {
+  height: 350px;
+  width: 170px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+}
+
+.hero__img-box.one {
+  position: relative;
+  /* animation: move 3s linear infinite; */
+}
+
+.hero__img-box.two {
+  position: relative;
+  margin-top: 20px;
+  /* animation: move 6s linear infinite; */
+}
+
+.hero__img-box.three {
+  position: relative;
+  padding-top: 40px;
+  /* animation: move 9s linear infinite; */
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50px;
+  }
+  50% {
+    top: 25px;
+  }
+}
+
+.section__services {
+  position: relative;
+  margin: 100px 100px 0 100px;
+  /* background-color: rebeccapurple; */
+}
+
+.service__wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.services__heading {
+  width: 250px;
+  /* margin: 10px; */
+  /* background-color: aquamarine; */
+}
+
+.service__wrapper .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.services__subtitle {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: var(--subtitle-font-name);
+}
+
+.services__title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.featured__tour-title {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.tour__card {
+  max-width: 310px;
+  height: 350px;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+}
+
+.tour__card:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px #666;
+}
+
+.featuredtourlist {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
