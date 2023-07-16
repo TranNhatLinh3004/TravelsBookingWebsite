@@ -8,7 +8,10 @@ import worldImg from "../assets/images/world.png";
 import Subtitle from "../shared/Subtitle";
 import SearchBar from "../shared/SearchBar";
 import ServiceList from "../UI/services/ServiceList";
-import FeaturedTourList from "../components/featuredtours/FeaturedTourList";
+import FeaturedTourList from "../components/featured-tours/FeaturedTourList";
+import experienceImg from "../assets/images/experience.png";
+import ImagesGallery from "../components/image-gallery/ImagesGallery";
+
 function Home(props) {
   // const videoRef = useRef(null);
 
@@ -79,7 +82,7 @@ function Home(props) {
 
       {/*  */}
 
-      <section className="section section-explore">
+      <section className="section section__explore">
         <Container>
           <Row>
             <Col lg="12">
@@ -92,6 +95,69 @@ function Home(props) {
             </div>
           </Row>
         </Container>
+      </section>
+
+      {/*  */}
+
+      <section className="section section__experience">
+        <div className="experience__left">
+          <div className="experience__content">
+            <Subtitle subtitle={"Experience"}></Subtitle>
+
+            <h2>
+              With our all experience <br />
+              we will serve you
+            </h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              <br />
+              Sequi deleniti nobis perspiciatis suscipit ea obcaecati minus
+              commodi.
+            </p>
+          </div>
+          <div className="counter__wrapper">
+            <div className="counter__box">
+              <span>12k+</span>
+              <h6>Successfull trip</h6>
+            </div>
+            <div className="counter__box">
+              <span>2k+</span>
+              <h6>Regular clients</h6>
+            </div>{" "}
+            <div className="counter__box">
+              <span>15</span>
+              <h6>Year Experience</h6>
+            </div>
+          </div>
+
+          {/* <button className="btn learn__btn">Learn more</button> */}
+        </div>
+
+        <div className=".experience__right">
+          <div className="experience__img">
+            <img src={experienceImg} alt="" />
+          </div>
+        </div>
+      </section>
+
+      {/*  */}
+
+      <section className="section section__gallery">
+        <Col>
+          <Subtitle subtitle={"Gallery"}></Subtitle>
+          <h2 className="gallery__title">Visit our customers tour gallery</h2>
+        </Col>
+        <Col>
+          <ImagesGallery />
+        </Col>
+      </section>
+      {/*  */}
+
+      <section className="section section__gallery">
+        <Col>
+          <Subtitle subtitle={"Fans Love"}></Subtitle>
+          <h2 className="gallery__title">What our fans say about us</h2>
+        </Col>
       </section>
     </>
   );
