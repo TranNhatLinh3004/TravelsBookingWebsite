@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/home.css";
 import { Button, Container, Row, Col } from "reactstrap";
 import heroImg from "../assets/images/hero-img01.jpg";
@@ -11,7 +11,10 @@ import ServiceList from "../UI/services/ServiceList";
 import FeaturedTourList from "../components/featured-tours/FeaturedTourList";
 import experienceImg from "../assets/images/experience.png";
 import ImagesGallery from "../components/image-gallery/ImagesGallery";
-
+import Testimoniaals from "../components/testimonial/Testimonials";
+import Testimonials from "../components/testimonial/Testimonials";
+import Newsletter from "../shared/Newsletter";
+import handleScroll from "../feature/handleScroll";
 function Home(props) {
   // const videoRef = useRef(null);
 
@@ -20,6 +23,18 @@ function Home(props) {
   //     videoRef.current.play();
   //   }
   // }, []);
+  let height = document.body.scrollHeight;
+  const [scrollY, setHeight] = useState(height);
+  window.addEventListener("scroll", () => {
+    setHeight(document.body.scrollHeight);
+  });
+
+  useEffect(() => {
+    handleScroll();
+
+    // document.header.className = icon;
+  }, [scrollY]);
+
   return (
     <>
       <section className="section section__home">
@@ -44,7 +59,7 @@ function Home(props) {
                   </p>
                 </div>
               </Col>
-              <div className="col__cr">
+              <div className="col__cr  hidden">
                 <Col lg="2">
                   <div className="hero__img-box one">
                     <img src={heroImg} alt="" />
@@ -101,7 +116,7 @@ function Home(props) {
 
       <section className="section section__experience">
         <div className="experience__left">
-          <div className="experience__content">
+          <div className="experience__content hidden">
             <Subtitle subtitle={"Experience"}></Subtitle>
 
             <h2>
@@ -115,7 +130,7 @@ function Home(props) {
               commodi.
             </p>
           </div>
-          <div className="counter__wrapper">
+          <div className="counter__wrapper  hidden">
             <div className="counter__box">
               <span>12k+</span>
               <h6>Successfull trip</h6>
@@ -133,7 +148,7 @@ function Home(props) {
           {/* <button className="btn learn__btn">Learn more</button> */}
         </div>
 
-        <div className=".experience__right">
+        <div className="experience__right hidden">
           <div className="experience__img">
             <img src={experienceImg} alt="" />
           </div>
@@ -158,7 +173,14 @@ function Home(props) {
           <Subtitle subtitle={"Fans Love"}></Subtitle>
           <h2 className="gallery__title">What our fans say about us</h2>
         </Col>
+        <div className="testimonials__wrapper">
+          <Testimonials></Testimonials>
+        </div>
       </section>
+
+      {/*  */}
+
+      <Newsletter></Newsletter>
     </>
   );
 }

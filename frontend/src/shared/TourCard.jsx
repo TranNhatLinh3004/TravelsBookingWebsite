@@ -1,15 +1,17 @@
 import React from "react";
 import { Card, NavLink } from "reactstrap";
 import "../styles/tourcard.css";
+import calculateAvgRating from "../utils/avgRating";
 function TourCard({ tour }) {
-  const { id, city, title, photo, price, featured, avgRating, reviews } = tour;
+  const { id, city, title, photo, price, featured, reviews } = tour;
   // }
+  const { avgRating, totalRating } = calculateAvgRating(reviews);
   return (
     <div className="tour__card">
       <div className="card">
         <div className="tour__img">
           <img src={photo} alt="" />
-          <span>Featured</span>
+          {featured && <span>Featured</span>}
         </div>
       </div>
 
@@ -21,8 +23,8 @@ function TourCard({ tour }) {
           </span>
           <span className="tour__rating">
             <i class="uil uil-star"></i>
-            {avgRating}
-            <span>({reviews.length})</span>
+            {avgRating === 0 ? null : avgRating}
+            {totalRating === 0 ? "Not rated" : <span>({reviews.length})</span>}
           </span>
         </div>
 
